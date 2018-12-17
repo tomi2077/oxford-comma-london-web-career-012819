@@ -10,3 +10,6 @@ def oxford_comma(array)
   end
 end
 
+
+"Lions, tigers, bears".tap{|s| s[s.rindex(', '), 2] = ' & '}
+=> "Lions, tigers & bears"
