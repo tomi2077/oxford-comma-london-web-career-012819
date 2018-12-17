@@ -5,11 +5,9 @@ def oxford_comma(array)
     return array.join(" and ")
   elsif array.count >= 3
     more_than_3 = array.join(", ")
-    more_than_3[-2] = "and"
+    more_than_3.tap {|i| i[i.rindex(", "), -1] = " and" }
     return more_than_3
   end
 end
 
 
-"Lions, tigers, bears".tap{|s| s[s.rindex(', '), 2] = ' & '}
-=> "Lions, tigers & bears"
