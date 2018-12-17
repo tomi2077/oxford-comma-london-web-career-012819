@@ -5,7 +5,8 @@ def oxford_comma(array)
     return array.join(" and ")
   elsif array.count >= 3
     more_than_3 = array.join(", ")
-    more_than_3[-2] = 
+    more_than_3[-2] = "and"
+    return more_than_3
   end
 end
 
